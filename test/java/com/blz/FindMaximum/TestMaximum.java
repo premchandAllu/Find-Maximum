@@ -7,9 +7,9 @@ public class TestMaximum {
 
 	@Test
 	public void testMaximumAtFirstPosition() {
-		Integer maximum=UserMaximum.findMaximum(81,45,18);
+		Integer maximum=UserMaximum.findMaximum(81, 45, 18);
 		boolean b;
-		if(maximum.equals(23))
+		if(maximum.equals(81))
 			b=true;
 		else
 			b=false;
@@ -18,9 +18,9 @@ public class TestMaximum {
 	
 	@Test
 	public void testMaximumAtSecondPosition() {
-		Integer maximum=UserMaximum.findMaximum(18,81,45 );
+		Integer maximum=UserMaximum.findMaximum(18, 81, 45);
 		boolean b;
-		if(maximum.equals(20))
+		if(maximum.equals(81))
 			b=true;
 		else
 			b=false;
@@ -31,7 +31,7 @@ public class TestMaximum {
 	public void testMaximumAtThirdPosition() {
 		Integer maximum=UserMaximum.findMaximum(18, 45, 81);
 		boolean b;
-		if(maximum.equals(40))
+		if(maximum.equals(81))
 			b=true;
 		else
 			b=false;
