@@ -6,8 +6,8 @@ public class UserMaximum {
 
 	public static Scanner sc = new Scanner(System.in);
 
-	public static Integer findMaximum(Integer x, Integer y, Integer z) {
-		int max = 0;
+	public static Float findMaximum(Float x, Float y, Float z) {
+		float max = 0.0f;
 		if (x.compareTo(y) > 0 && x.compareTo(z) > 0) {
 			max = x;
 			System.out.println(x + " is the maximum number");
@@ -26,9 +26,9 @@ public class UserMaximum {
 		System.out.println("Welcome to Test maximum Code");
 
 		System.out.println("Enter three variables");
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int c = sc.nextInt();
+		float a = sc.nextFloat();
+		float b = sc.nextFloat();
+		float c = sc.nextFloat();
 		
 		findMaximum(a, b, c);
 	}
