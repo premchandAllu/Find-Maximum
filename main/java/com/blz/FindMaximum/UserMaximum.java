@@ -8,6 +8,7 @@ public class UserMaximum <E extends Comparable<E>> {
 	E x,y,z;
 	E max;
 	public static Scanner sc = new Scanner(System.in);
+
     
 	public UserMaximum() {
 		
@@ -23,6 +24,10 @@ public class UserMaximum <E extends Comparable<E>> {
 		return max;
 	}
 
+	public void toPrintMaximum() {
+		System.out.println(max);
+	}
+	
 	public static void main(String[] args) {
 	
 		System.out.println("Welcome to Test maximum Code");
