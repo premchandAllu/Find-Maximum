@@ -1,3 +1,4 @@
+  
 package com.blz.FindMaximum;
 
 import org.junit.Assert;
@@ -7,34 +8,34 @@ public class TestMaximum {
 
 	@Test
 	public void testMaximumAtFirstPosition() {
-		Float maximum=UserMaximum.findMaximum(81.1f, 45.5f, 18.8f);
+		String maximum = UserMaximum.findMaximum("Peach","Banana", "Apple");
 		boolean b;
-		if(maximum.equals(81.1f))
-			b=true;
+		if (maximum.equals("Peach"))
+			b = true;
 		else
-			b=false;
+			b = false;
 		Assert.assertEquals(true, b);
 	}
-	
+
 	@Test
 	public void testMaximumAtSecondPosition() {
-		Float maximum=UserMaximum.findMaximum(18.8f, 81.1f, 45.5f);
+		String maximum = UserMaximum.findMaximum("Apple", "Peach", "Banana");
 		boolean b;
-		if(maximum.equals(81.1f))
-			b=true;
+		if (maximum.equals("Peach"))
+			b = true;
 		else
-			b=false;
+			b = false;
 		Assert.assertEquals(true, b);
 	}
-	
+
 	@Test
 	public void testMaximumAtThirdPosition() {
-		Float maximum=UserMaximum.findMaximum(18.8f, 45.5f, 81.1f);
+		String maximum = UserMaximum.findMaximum("Apple", "Banana", "Peach");
 		boolean b;
-		if(maximum.equals(81.1f))
-			b=true;
+		if (maximum.equals("Peach"))
+			b = true;
 		else
-			b=false;
+			b = false;
 		Assert.assertEquals(true, b);
 	}
 }
