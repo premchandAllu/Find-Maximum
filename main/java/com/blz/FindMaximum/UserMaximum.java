@@ -1,11 +1,24 @@
 package com.blz.FindMaximum;
 import java.util.Scanner;
 
-public class UserMaximum {
+public class UserMaximum <E extends Comparable<E>> {
 
+	E x,y,z;
+	E max;
 	public static Scanner sc = new Scanner(System.in);
 
-
+    
+	public UserMaximum(E x,E y,E z) {
+		this.x=x;
+		this.y=y;
+		this.z=z;
+		
+	}
+	
+	private E printMax(){
+	    return UserMaximum.findMaximum(x,y,z);	
+	}
+	
 	public static <E extends Comparable<E>> E findMaximum(E x, E y, E z) {
 		E max = x;
 		if (x.compareTo(y) > 0 && x.compareTo(z) > 0) {
@@ -29,18 +42,18 @@ public class UserMaximum {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		int c = sc.nextInt();
-		System.out.println("Maximum number is " + findMaximum(a, b, c));
+		System.out.println("Maximum number is " + new UserMaximum<Integer>(a,b,c).printMax());
 
 		System.out.println("Enter three float variables");
 		float x = sc.nextFloat();
 		float y = sc.nextFloat();
 		float z = sc.nextFloat();
-		System.out.println("Maximum number is " + findMaximum(x, y, z));
+		System.out.println("Maximum number is " + new UserMaximum<Float>(x,y,z).printMax());
 
 		System.out.println("Enter three Strings");
 		String str1 = sc.next();
 		String str2 = sc.next();
 		String str3 = sc.next();
-		System.out.println("Maximum string is " + findMaximum(str1, str2, str3));
+		System.out.println("Maximum string is " + new UserMaximum<String>(str1,str2,str3).printMax());
 	}
 }
